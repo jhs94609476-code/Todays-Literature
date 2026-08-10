@@ -4,7 +4,8 @@ import { getAllPosts, NAV_ITEMS } from '@/data/db';
 export const dynamic = 'force-static';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://todays-literature.com';
+  // ▼ 이 부분을 환경변수 없이 Vercel 주소로만 확정 지었습니다.
+  const baseUrl = 'https://todays-literature-tau.vercel.app';
   const posts = getAllPosts();
 
   const postUrls: MetadataRoute.Sitemap = posts.map((post) => ({

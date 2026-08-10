@@ -3,7 +3,7 @@ import type { MetadataRoute } from 'next';
 export const dynamic = 'force-static';
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://todays-literature.com';
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://todays-literature-tau.vercel.app';
 
   return {
     rules: {
