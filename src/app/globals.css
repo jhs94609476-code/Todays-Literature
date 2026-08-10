@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+:root {
+  --background: #FCFBF7;
+  --foreground: #2C2520;
+}
+
+@theme {
+  --font-serif: var(--font-serif), Georgia, serif;
+  --font-sans: var(--font-sans), system-ui, -apple-system, sans-serif;
+
+  --color-cream: #FCFBF7;
+  --color-cream-dark: #F5F2EB;
+  --color-sepia-dark: #2C2520;
+  --color-sepia-muted: #5C524A;
+  --color-gold: #8C6239;
+  --color-gold-light: #C5A880;
+  --color-coupang-red: #C0392B;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+}
+
+/* Custom micro-animations */
+.hover-gold-transition {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.hover-gold-transition:hover {
+  color: #8C6239;
+}
+
