@@ -17,10 +17,13 @@ const notoSans = Noto_Sans_KR({
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://todays-literature.com";
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://todays-literature-tau.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
+  alternates: {
+    canonical: "/",
+  },
   title: {
     template: "%s | 오늘의 문학",
     default: "오늘의 문학 | 프리미엄 인문학 웹 매거진",

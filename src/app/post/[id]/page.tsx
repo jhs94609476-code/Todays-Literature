@@ -25,16 +25,64 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
     return { title: "글을 찾을 수 없습니다" };
   }
 
+  const description = post.summary || post.excerpt || "";
+  const rawKeywords = post.keywords
+    ? post.keywords.split(",").map((k) => k.trim()).filter(Boolean)
+    : [post.category, post.author, "오늘의 문학", "인문학", "고전문학", "철학"];
+  const uniqueKeywords = Array.from(new Set(rawKeywords));
+
   return {
     title: post.title,
-    description: post.excerpt,
+    description: description,
+    keywords: uniqueKeywords,
+    alternates: {
+      canonical: `/post/${id}`,
+    },
+    openGraph: {
+      title: `${post.title} | 오늘의 문학`,
+      description: description,
+      url: `/post/${id}`,
+      siteName: "오늘의 문학",
+      type: "article",
+      publishedTime: post.date ? new Date(post.date).toISOString() : undefined,
+      authors: [post.author || "오늘의 문학 편집부"],
+      tags: uniqueKeywords,
+      images: [
+        {
+          url: post.coverImage || "/images/hero_library.png",
+          width: 800,
+          height: 600,
+          alt: `${post.title} 대표 이미지`,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${post.title} | 오늘의 문학`,
+      description: description,
+      images: [post.coverImage || "/images/hero_library.png"],
+    },
   };
 }
 
 // HTML 블록을 가독성 스타일이 적용된 JSX로 변환하는 헬퍼
 function renderHtmlBlock(html: string, index: number) {
-  // h2 태그에 스타일 주입
-  let styled = html
+  // 1. 외부 링크(<a> 태그)에 rel="nofollow sponsored noopener noreferrer" 및 target="_blank" 자동 보장
+  let styled = html.replace(
+    /<a\s+([^>]*?)href=(["'])(.*?)\2([^>]*)>/gi,
+    (match, before, quote, href, after) => {
+      const isInternal = href.startsWith("/") || href.startsWith("#") || href.includes("todays-literature");
+      if (isInternal) {
+        return match;
+      }
+      // 외부 제휴 링크인 경우 안전하게 rel 속성과 target 속성 주입
+      const rest = `${before} ${after}`.replace(/\s*rel=(["']).*?\1/gi, "").replace(/\s*target=(["']).*?\1/gi, "").trim();
+      return `<a href="${href}" target="_blank" rel="nofollow sponsored noopener noreferrer" ${rest ? `${rest} ` : ""}class="text-gold hover:underline">`;
+    }
+  );
+
+  // 2. h2, h3, p, strong, b, blockquote 태그에 스타일 주입
+  styled = styled
     .replace(
       /<h2>/g,
       '<h2 style="font-size:1.5rem;font-weight:700;margin-top:3rem;margin-bottom:1rem;padding-left:1rem;border-left:4px solid #c8a96e;color:#2d1f0f;font-family:var(--font-serif);line-height:1.4;">'

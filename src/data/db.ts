@@ -2,12 +2,15 @@ import postsData from './posts.json';
 
 export interface Post {
   id: string;
+  slug: string;
   category: string;
   title: string;
   author: string;
   date: string;
   coverImage: string;
   excerpt: string;
+  summary?: string;
+  keywords?: string;
   bodyText: string;
 }
 

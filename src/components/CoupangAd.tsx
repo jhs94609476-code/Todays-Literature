@@ -6,7 +6,7 @@ export default function CoupangAd() {
       <a
         href="https://link.coupang.com/a/f6rhAdVX76"
         target="_blank"
-        rel="noreferrer"
+        rel="nofollow sponsored noopener noreferrer"
         referrerPolicy="unsafe-url"
         className="inline-block hover:opacity-95 transition-opacity max-w-full"
       >

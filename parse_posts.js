@@ -118,6 +118,8 @@ files.forEach((file, index) => {
       date: date,
       coverImage: coverImage,
       excerpt: metadata.summary || metadata.excerpt || '',
+      summary: metadata.summary || metadata.excerpt || '',
+      keywords: metadata.keywords || '',
       bodyText: bodyText
     });
   }

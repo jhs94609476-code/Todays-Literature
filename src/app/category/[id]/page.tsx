@@ -23,6 +23,14 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   return {
     title: `${categoryKorean} | 카테고리 목록`,
     description: `${categoryKorean} 카테고리의 유익한 글 목록을 확인해 보세요.`,
+    alternates: {
+      canonical: `/category/${id}`,
+    },
+    openGraph: {
+      title: `${categoryKorean} | 오늘의 문학`,
+      description: `${categoryKorean} 카테고리의 유익한 글 목록을 확인해 보세요.`,
+      url: `/category/${id}`,
+    },
   };
 }
 

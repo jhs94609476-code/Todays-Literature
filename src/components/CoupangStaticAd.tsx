@@ -11,7 +11,7 @@ export default function CoupangStaticAd({ type }: CoupangStaticAdProps) {
         <a
           href="https://link.coupang.com/a/fTi3H3h0Am"
           target="_blank"
-          rel="noreferrer"
+          rel="nofollow sponsored noopener noreferrer"
           referrerPolicy="unsafe-url"
           className="inline-block hover:opacity-95 transition-opacity max-w-full"
         >
@@ -30,7 +30,7 @@ export default function CoupangStaticAd({ type }: CoupangStaticAdProps) {
       <a
         href="https://link.coupang.com/a/fTiWhkkHXU"
         target="_blank"
-        rel="noreferrer"
+        rel="nofollow sponsored noopener noreferrer"
         referrerPolicy="unsafe-url"
         className="inline-block hover:opacity-95 transition-opacity max-w-full"
       >
