@@ -1,6 +1,7 @@
 ---
 title: "밥 딜런의 노킹 온 헤븐스 도어(Knockin' on Heaven's Door) 음유시인의 노래가 노벨문학상이 되기까지"
 category: 음악, 역사
+image: "/images/authors/bob-dylan.jpeg"
 summary: "대중음악인 최초로 노벨문학상을 수상한 밥 딜런의 대표 명곡 Knockin' on Heaven's Door를 심층 분석합니다. 영화 관계의 종말에서 탄생한 불멸의 선율과 시적 노랫말, 그리고 반전과 실존적 안식의 메시지를 조명합니다."
 keywords: "밥 딜런, 노킹 온 헤븐스 도어, 노벨문학상, 포크 록, 영화 음악, 반전 평화"
 ---

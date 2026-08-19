@@ -96,7 +96,8 @@ files.forEach((file, index) => {
     
     // Auto-match author image if available, else assign fallback category banner
     const authorImg = getAuthorImage(slug);
-    let coverImage = authorImg;
+    const imageFromMeta = metadata.image ? metadata.image.replace(/^["']|["']$/g, '').trim() : null;
+    let coverImage = imageFromMeta || authorImg;
     if (!coverImage) {
       coverImage = '/images/hero_library.png';
       if (category === '철학, 사상') coverImage = '/images/cat_philosophy.png';
