@@ -69,8 +69,7 @@ export default function CategoryClient() {
               수익화 안내 및 고지
             </span>
             <p className="text-xs sm:text-sm text-coupang-red/90 leading-relaxed font-medium">
-              오늘의 문학은 쿠팡 파트너스 등 다양한 제휴 마케팅 링크와 제휴 광고를 게재하여, 
-              이용자가 해당 광고를 통해 상품을 구매할 경우 일정 수수료를 제공받아 매거진 제작 비용으로 사용합니다.
+              이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.
             </p>
           </div>
         </div>
