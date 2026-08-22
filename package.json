@@ -4,9 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev --webpack",
-    "prebuild": "node parse_posts.js",
-    "build": "next build --webpack",
-    "export": "next build --webpack",
+    "build": "node parse_posts.js && next build --webpack",
+    "export": "node parse_posts.js && next build --webpack",
     "start": "next start",
     "lint": "next lint"
   },
