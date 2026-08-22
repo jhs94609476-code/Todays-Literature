@@ -73,8 +73,8 @@ export default function Home() {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {posts.map((post) => (
                   <Link
-                    key={post.id}
-                    href={`/post/${post.id}`}
+                    key={post.slug}
+                    href={`/post/${post.slug}`}
                     prefetch={false}
                     className="flex flex-col bg-cream-dark/40 hover:bg-cream-dark/90 border border-gold/10 rounded-lg overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-md group"
                   >

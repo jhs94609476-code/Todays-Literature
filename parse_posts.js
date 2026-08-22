@@ -111,7 +111,7 @@ files.forEach((file, index) => {
     const author = metadata.author || (category === '시대의 거장들' ? '거장 편집부' : '인문학 편집부');
 
     posts.push({
-      id: String(index + 1),
+      id: slug,
       slug: slug,
       category: category,
       title: metadata.title || '제목 없음',

@@ -10,7 +10,7 @@ export async function GET() {
   const itemsXml = posts
     .map((post) => {
       const pubDate = new Date(post.date).toUTCString();
-      const postUrl = `${SITE_URL}/post/${post.id}`;
+      const postUrl = `${SITE_URL}/post/${post.slug}`;
       const title = post.title
         .replace(/&/g, '&amp;')
         .replace(/</g, '&lt;')

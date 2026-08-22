@@ -87,9 +87,9 @@ export default function CategoryClient() {
                 const adSlotIndex = Math.floor((index + 1) / 5) - 1; // 0-based rotation index
 
                 return (
-                  <div key={post.id} className="space-y-8">
+                  <div key={post.slug} className="space-y-8">
                     <Link
-                      href={`/post/${post.id}`}
+                      href={`/post/${post.slug}`}
                       prefetch={false}
                       className="flex flex-col md:flex-row bg-cream-dark/30 hover:bg-cream-dark/60 border border-gold/10 hover:border-gold/30 rounded-lg overflow-hidden transition-all duration-300 hover:shadow-md group"
                     >

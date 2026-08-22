@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { getPostById, getRelatedPosts, REVERSE_CATEGORY_MAP, getAllPosts } from "@/data/db";
+import { getPostBySlug, getPostById, getRelatedPosts, REVERSE_CATEGORY_MAP, getAllPosts } from "@/data/db";
 import { Calendar, User, ArrowLeft, Bookmark, Heart, Share2, Info } from "lucide-react";
 import CoupangAd from "@/components/CoupangAd";
 import CoupangStaticAd from "@/components/CoupangStaticAd";
@@ -10,38 +10,49 @@ interface PostPageProps {
   params: Promise<{ id: string }>;
 }
 
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://todays-literature-tau.vercel.app";
+
 export async function generateStaticParams() {
   const posts = getAllPosts();
   return posts.map((post) => ({
-    id: post.id,
+    id: post.slug || post.id,
   }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
-  const post = getPostById(id);
+  const post = getPostBySlug(id) || getPostById(id);
   
   if (!post) {
     return { title: "글을 찾을 수 없습니다" };
   }
 
-  const description = post.summary || post.excerpt || "";
+  const cleanTitle = (post.title || '').replace(/^["']|["']$/g, '').trim();
+  const description = (post.summary || post.excerpt || "").replace(/^["']|["']$/g, '').trim();
   const rawKeywords = post.keywords
-    ? post.keywords.split(",").map((k) => k.trim()).filter(Boolean)
+    ? post.keywords.replace(/^["']|["']$/g, '').split(",").map((k) => k.trim()).filter(Boolean)
     : [post.category, post.author, "오늘의 문학", "인문학", "고전문학", "철학"];
   const uniqueKeywords = Array.from(new Set(rawKeywords));
 
+  // 검색엔진(네이버/구글/다음 등) 크롤링용 절대 경로 이미지 URL 구성
+  const rawImage = post.coverImage || "/images/hero_library.png";
+  const coverImageUrl = rawImage.startsWith('http')
+    ? rawImage
+    : `${SITE_URL}${rawImage.startsWith('/') ? '' : '/'}${rawImage}`;
+
+  const currentSlug = post.slug || post.id;
+
   return {
-    title: post.title,
+    title: cleanTitle,
     description: description,
     keywords: uniqueKeywords,
     alternates: {
-      canonical: `/post/${id}`,
+      canonical: `/post/${currentSlug}`,
     },
     openGraph: {
-      title: `${post.title} | 오늘의 문학`,
+      title: `${cleanTitle} | 오늘의 문학`,
       description: description,
-      url: `/post/${id}`,
+      url: `${SITE_URL}/post/${currentSlug}`,
       siteName: "오늘의 문학",
       type: "article",
       publishedTime: post.date ? new Date(post.date).toISOString() : undefined,
@@ -49,18 +60,18 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
       tags: uniqueKeywords,
       images: [
         {
-          url: post.coverImage || "/images/hero_library.png",
+          url: coverImageUrl,
           width: 800,
           height: 600,
-          alt: `${post.title} 대표 이미지`,
+          alt: `${cleanTitle} 대표 작가 초상화`,
         },
       ],
     },
     twitter: {
       card: "summary_large_image",
-      title: `${post.title} | 오늘의 문학`,
+      title: `${cleanTitle} | 오늘의 문학`,
       description: description,
-      images: [post.coverImage || "/images/hero_library.png"],
+      images: [coverImageUrl],
     },
   };
 }
@@ -118,13 +129,14 @@ function renderHtmlBlock(html: string, index: number) {
 
 export default async function PostPage({ params }: PostPageProps) {
   const { id } = await params;
-  const post = getPostById(id);
+  const post = getPostBySlug(id) || getPostById(id);
 
   if (!post) {
     notFound();
   }
 
-  const relatedPosts = getRelatedPosts(post.category, post.id, 10);
+  const currentSlug = post.slug || post.id;
+  const relatedPosts = getRelatedPosts(post.category, currentSlug, 10);
   const categorySlug = REVERSE_CATEGORY_MAP[post.category] || "masters";
 
   // Parse body text into paragraphs, ads, and inline images
@@ -265,9 +277,9 @@ export default async function PostPage({ params }: PostPageProps) {
           </h3>
           <ul className="divide-y divide-gold/10">
             {relatedPosts.map((relatedPost) => (
-              <li key={relatedPost.id} className="py-3.5 group">
+              <li key={relatedPost.slug || relatedPost.id} className="py-3.5 group">
                 <Link
-                  href={`/post/${relatedPost.id}`}
+                  href={`/post/${relatedPost.slug || relatedPost.id}`}
                   prefetch={false}
                   className="flex justify-between items-center gap-4 text-sm sm:text-base text-sepia-dark group-hover:text-gold transition-colors"
                 >

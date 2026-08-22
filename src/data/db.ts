@@ -55,16 +55,20 @@ export const CATEGORY_INTRO: { [key: string]: { desc: string; banner: string } }
 };
 
 export function getAllPosts(): Post[] {
-  // Sort posts by date descending, then by id descending
+  // Sort posts by date descending, then by slug
   return [...postsData as Post[]].sort((a, b) => {
     const dateCompare = new Date(b.date).getTime() - new Date(a.date).getTime();
     if (dateCompare !== 0) return dateCompare;
-    return parseInt(b.id) - parseInt(a.id);
+    return a.slug.localeCompare(b.slug);
   });
 }
 
 export function getPostById(id: string): Post | undefined {
-  return (postsData as Post[]).find(post => post.id === id);
+  return (postsData as Post[]).find(post => post.id === id || post.slug === id);
+}
+
+export function getPostBySlug(slug: string): Post | undefined {
+  return (postsData as Post[]).find(post => post.slug === slug || post.id === slug);
 }
 
 export function getPostsByCategory(categoryName: string): Post[] {
@@ -99,9 +103,9 @@ export function getPaginatedPostsByCategory(
   };
 }
 
-export function getRelatedPosts(categoryName: string, currentPostId: string, limit: number = 10): Post[] {
+export function getRelatedPosts(categoryName: string, currentSlugOrId: string, limit: number = 10): Post[] {
   return getAllPosts()
-    .filter(post => post.category === categoryName && post.id !== currentPostId)
+    .filter(post => post.category === categoryName && post.id !== currentSlugOrId && post.slug !== currentSlugOrId)
     .slice(0, limit);
 }
 

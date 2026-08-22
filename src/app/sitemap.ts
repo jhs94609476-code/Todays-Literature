@@ -9,7 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const posts = getAllPosts();
 
   const postUrls: MetadataRoute.Sitemap = posts.map((post) => ({
-    url: `${baseUrl}/post/${post.id}`,
+    url: `${baseUrl}/post/${post.slug}`,
     lastModified: new Date(post.date || Date.now()),
     changeFrequency: 'weekly',
     priority: 0.8,
