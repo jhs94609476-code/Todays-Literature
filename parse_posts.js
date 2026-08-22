@@ -73,7 +73,9 @@ files.forEach((file, index) => {
       }
     });
     
-    const slug = file.replace('.md', '');
+    // 1. Slug & ID: Always strictly use markdown filename without .md (e.g., 'han-kang_human-acts')
+    const slug = file.replace(/\.md$/i, '').trim();
+    const id = slug;
     
     // Extract & normalize category string (remove surrounding quotes/spaces)
     let category = metadata.category || '시대의 거장들';
@@ -111,7 +113,7 @@ files.forEach((file, index) => {
     const author = metadata.author || (category === '시대의 거장들' ? '거장 편집부' : '인문학 편집부');
 
     posts.push({
-      id: slug,
+      id: id,
       slug: slug,
       category: category,
       title: metadata.title || '제목 없음',

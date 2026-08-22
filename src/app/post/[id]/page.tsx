@@ -15,7 +15,7 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://todays-literature-
 export async function generateStaticParams() {
   const posts = getAllPosts();
   return posts.map((post) => ({
-    id: post.slug || post.id,
+    id: post.slug,
   }));
 }
 
@@ -277,9 +277,9 @@ export default async function PostPage({ params }: PostPageProps) {
           </h3>
           <ul className="divide-y divide-gold/10">
             {relatedPosts.map((relatedPost) => (
-              <li key={relatedPost.slug || relatedPost.id} className="py-3.5 group">
+              <li key={relatedPost.slug} className="py-3.5 group">
                 <Link
-                  href={`/post/${relatedPost.slug || relatedPost.id}`}
+                  href={`/post/${relatedPost.slug}`}
                   prefetch={false}
                   className="flex justify-between items-center gap-4 text-sm sm:text-base text-sepia-dark group-hover:text-gold transition-colors"
                 >
