@@ -20,7 +20,9 @@ export const CATEGORY_MAP: { [key: string]: string } = {
   "poetry": "문학, 시",
   "history": "음악, 역사",
   "essay": "현대 에세이, 삶",
-  "masters": "시대의 거장들"
+  "masters": "시대의 거장들",
+  "economics": "경제, 자본",
+  "comics": "코믹스, 그래픽노블"
 };
 
 export const REVERSE_CATEGORY_MAP: { [key: string]: string } = {
@@ -28,7 +30,11 @@ export const REVERSE_CATEGORY_MAP: { [key: string]: string } = {
   "문학, 시": "poetry",
   "음악, 역사": "history",
   "현대 에세이, 삶": "essay",
-  "시대의 거장들": "masters"
+  "시대의 거장들": "masters",
+  "경제, 자본": "economics",
+  "경제": "economics",
+  "코믹스, 그래픽노블": "comics",
+  "코믹스": "comics"
 };
 
 export const CATEGORY_INTRO: { [key: string]: { desc: string; banner: string } } = {
@@ -51,6 +57,14 @@ export const CATEGORY_INTRO: { [key: string]: { desc: string; banner: string } }
   "시대의 거장들": {
     desc: "예술, 과학, 인문학 등 각 분야에서 불멸의 발자국을 남긴 역사적 거장들의 삶과 사유를 탐색합니다.",
     banner: "/images/cat_masters.png"
+  },
+  "경제, 자본": {
+    desc: "세계 경제를 움직이는 자본의 원리, 투자의 지혜, 그리고 부를 둘러싼 인간과 사회의 이야기를 탐색합니다.",
+    banner: "/images/cat_economics.png"
+  },
+  "코믹스, 그래픽노블": {
+    desc: "언어와 그림이 어우러진 독창적인 예술 형식, 그래픽노블과 코믹스가 담아낸 인간의 상상력과 이야기를 소개합니다.",
+    banner: "/images/cat_comics.png"
   }
 };
 
@@ -115,4 +129,6 @@ export const NAV_ITEMS = [
   { label: "음악, 역사", href: "/category/history" },
   { label: "현대 에세이, 삶", href: "/category/essay" },
   { label: "시대의 거장들", href: "/category/masters" },
+  { label: "경제, 자본", href: "/category/economics" },
+  { label: "코믹스, 그래픽노블", href: "/category/comics" },
 ];

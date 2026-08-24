@@ -92,6 +92,10 @@ files.forEach((file, index) => {
       category = '현대 에세이, 삶';
     } else if (category === '시대의 거장들' || category === '세기의 거장들' || category === '거장들') {
       category = '시대의 거장들';
+    } else if (category === '경제, 자본' || category === '경제') {
+      category = '경제, 자본';
+    } else if (category === '코믹스, 그래픽노블' || category === '코믹스') {
+      category = '코믹스, 그래픽노블';
     } else {
       category = '시대의 거장들';
     }
@@ -107,6 +111,8 @@ files.forEach((file, index) => {
       else if (category === '음악, 역사') coverImage = '/images/cat_history.png';
       else if (category === '현대 에세이, 삶') coverImage = '/images/cat_essay.png';
       else if (category === '시대의 거장들') coverImage = '/images/cat_masters.png';
+      else if (category === '경제, 자본') coverImage = '/images/cat_economics.png';
+      else if (category === '코믹스, 그래픽노블') coverImage = '/images/cat_comics.png';
     }
 
     const date = metadata.date || `2026-07-${String(Math.max(1, 30 - index)).padStart(2, '0')}`;
