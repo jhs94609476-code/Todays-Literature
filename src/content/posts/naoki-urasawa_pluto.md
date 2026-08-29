@@ -1,4 +1,4 @@
-﻿---
+---
 title: 우라사와 나오키 플루토 해석: 아톰의 재해석으로 파헤친 인간의 증오와 로봇의 슬픔
 category: 코믹스, 그래픽노블
 image: "/images/authors/pluto.jpg"

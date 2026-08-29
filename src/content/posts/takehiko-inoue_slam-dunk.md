@@ -1,4 +1,4 @@
-﻿---
+---
 title: 이노우에 다케히코 슬램덩크 결말과 명대사로 본 불멸의 청춘 성장 스포츠 만화
 category: 코믹스, 그래픽노블
 image: "/images/authors/slam-dunk.jpg"

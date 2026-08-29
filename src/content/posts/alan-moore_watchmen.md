@@ -1,4 +1,4 @@
-﻿---
+---
 title: 앨런 무어 왓치맨 해석: 슈퍼히어로 해체주의와 냉전 디스토피아의 걸작
 category: 코믹스, 그래픽노블
 image: "/images/authors/watchmen.jpg"

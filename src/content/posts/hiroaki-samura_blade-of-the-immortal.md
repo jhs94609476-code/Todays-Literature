@@ -1,4 +1,4 @@
-﻿---
+---
 title: 사무라 히로아키 무한의 주인 - 불사의 저주를 짊어진 검객과 독보적 화풍이 빚어낸 네오 찬바라의 정점
 category: 코믹스, 그래픽노블
 image: "/images/authors/blade-of-the-immortal.jpg"

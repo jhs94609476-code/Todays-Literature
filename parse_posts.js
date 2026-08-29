@@ -54,7 +54,9 @@ const posts = [];
 
 files.forEach((file, index) => {
   const filePath = path.join(postsDir, file);
-  const content = fs.readFileSync(filePath, 'utf-8');
+  let content = fs.readFileSync(filePath, 'utf-8');
+  // Remove UTF-8 BOM if present (added by PowerShell's Set-Content -Encoding UTF8)
+  if (content.charCodeAt(0) === 0xFEFF) content = content.slice(1);
   
   // Extract YAML front-matter and content
   const match = content.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n([\s\S]*)$/);

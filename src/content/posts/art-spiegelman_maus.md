@@ -1,4 +1,4 @@
-﻿---
+---
 title: 아트 슈피겔만 쥐(Maus) 줄거리와 해석 | 그래픽노블 최초 퓰리처상 수상작 완벽 분석
 category: 코믹스, 그래픽노블
 image: "/images/authors/maus.jpg"

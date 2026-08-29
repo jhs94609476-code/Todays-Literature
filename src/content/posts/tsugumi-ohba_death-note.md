@@ -1,4 +1,4 @@
-﻿---
+---
 title: "데스노트 결말 해석과 철학적 고찰: 야가미 라이토와 L이 던진 정의의 본질"
 category: 코믹스, 그래픽노블
 image: "/images/authors/death-note.jpg"

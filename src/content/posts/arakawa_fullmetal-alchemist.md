@@ -1,4 +1,4 @@
-﻿---
+---
 title: 아라카와 히로무 강철의 연금술사 | 등가교환을 넘어 인간의 연대를 완성한 소년 만화 걸작
 category: 코믹스, 그래픽노블
 image: "/images/authors/fullmetal-alchemist.jpg"

@@ -1,4 +1,4 @@
-﻿---
+---
 title: 오토모 가츠히로 아키라(AKIRA) 해설 - 사이버펑크의 정점이 된 네오 도쿄의 묵시록
 category: 코믹스, 그래픽노블
 image: "/images/authors/akira.jpg"

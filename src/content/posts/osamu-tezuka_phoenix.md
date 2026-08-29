@@ -1,4 +1,4 @@
-﻿---
+---
 title: 데즈카 오사무 불새 완벽 해설: 시공간을 초월한 윤회사상과 영생의 덧없음
 category: 코믹스, 그래픽노블
 image: "/images/authors/phoenix.jpg"

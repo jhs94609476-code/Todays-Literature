@@ -1,4 +1,4 @@
-﻿---
+---
 title: 류 유키노부 단다단, 요괴와 외계인이 질주하는 압도적 작화의 오컬트 액션 만화
 category: 코믹스, 그래픽노블
 image: "/images/authors/dandadan.jpg"

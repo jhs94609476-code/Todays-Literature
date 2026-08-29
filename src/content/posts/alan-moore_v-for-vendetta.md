@@ -1,4 +1,4 @@
-﻿---
+---
 title: 앨런 무어의 브이 포 벤데타, 전체주의 통제 사회에 맞선 아나키즘과 불멸의 아이디어
 category: 코믹스, 그래픽노블
 image: "/images/authors/watchmen.jpg"
