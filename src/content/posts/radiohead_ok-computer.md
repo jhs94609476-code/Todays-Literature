@@ -1,6 +1,6 @@
 ---
 title: "라디오헤드 OK Computer: 21세기 디지털 사회의 인간 소외와 디스토피아적 기술 불안"
-category: "음악, 역사, 인문학"
+category: 음악, 역사
 image: "/images/authors/radiohead.jpg"
 summary: "라디오헤드의 명작 OK Computer가 예견한 21세기 디지털 디스토피아, 그리고 톰 요크의 목소리를 통해 들여다보는 현대인의 인간 소외와 기술 불안의 인문학적 의미."
 keywords: "라디오헤드, OK Computer, 톰 요크, 디스토피아, 얼터너티브 록, 소외"
