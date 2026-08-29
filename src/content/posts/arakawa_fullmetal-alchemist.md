@@ -1,7 +1,7 @@
----
+﻿---
 title: 아라카와 히로무 강철의 연금술사 | 등가교환을 넘어 인간의 연대를 완성한 소년 만화 걸작
 category: 코믹스, 그래픽노블
-image: "/images/authors/hiromu-arakawa.jpg"
+image: "/images/authors/fullmetal-alchemist.jpg"
 summary: "아라카와 히로무의 대표작 강철의 연금술사는 등가교환의 냉혹한 법칙 속에서 피어나는 인간의 연대와 성장을 그린 판타지 명작입니다. 에드워드 엘릭 형제의 여정을 통해 진정한 구원과 삶의 가치를 인문학적 시선으로 분석합니다."
 keywords: "아라카와 히로무, 강철의 연금술사, 에드워드 엘릭, 등가교환, 소년 만화 걸작, 판타지 명작"
 ---

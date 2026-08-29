@@ -1,7 +1,7 @@
----
+﻿---
 title: 아트 슈피겔만 쥐(Maus) 줄거리와 해석 | 그래픽노블 최초 퓰리처상 수상작 완벽 분석
 category: 코믹스, 그래픽노블
-image: "/images/authors/art-spiegelman.jpg"
+image: "/images/authors/maus.jpg"
 summary: "아트 슈피겔만의 그래픽노블 쥐(Maus)는 홀로코스트의 참상을 동물 우화로 담아내어 퓰리처상을 수상한 불멸의 명작입니다. 작품의 역사적 배경, 동물 은유의 상징적 의미, 그리고 세대를 관통하는 트라우마의 서사를 깊이 있게 분석합니다."
 keywords: "아트 슈피겔만, 쥐, Maus, 홀로코스트, 그래픽노블 고전, 역사 만화"
 ---

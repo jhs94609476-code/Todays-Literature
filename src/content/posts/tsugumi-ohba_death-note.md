@@ -1,7 +1,7 @@
----
+﻿---
 title: "데스노트 결말 해석과 철학적 고찰: 야가미 라이토와 L이 던진 정의의 본질"
 category: 코믹스, 그래픽노블
-image: "/images/authors/tsugumi-ohba.jpg"
+image: "/images/authors/death-note.jpg"
 summary: "오바 츠구미와 오바타 다케시의 걸작 심리 스릴러 서스펜스 만화 데스노트를 심층 분석합니다. 야가미 라이토와 L의 치열한 두뇌 싸움 속에 감춰진 정의의 왜곡과 인간 본성의 한계를 철학적 관점에서 조명합니다."
 keywords: "데스노트, 야가미 라이토, L, 오바 츠구미, 서스펜스 만화, 심리 스릴러"
 ---

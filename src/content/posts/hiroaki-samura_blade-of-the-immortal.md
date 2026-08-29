@@ -1,7 +1,7 @@
----
+﻿---
 title: 사무라 히로아키 무한의 주인 - 불사의 저주를 짊어진 검객과 독보적 화풍이 빚어낸 네오 찬바라의 정점
 category: 코믹스, 그래픽노블
-image: "/images/authors/hiroaki-samura.jpg"
+image: "/images/authors/blade-of-the-immortal.jpg"
 summary: "사무라 히로아키의 대표작 무한의 주인은 불사신 검객 만지의 참회와 복수를 그린 시대극 명작입니다. 독보적인 연필화풍 펜선과 파격적인 연출로 찬바라 장르의 새 지평을 연 이 작품의 철학적 메시지와 예술적 가치를 심도 있게 분석합니다."
 keywords: "사무라 히로아키, 무한의 주인, 만지, 불사신, 사무라이 만화, 시대극 명작"
 ---

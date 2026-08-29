@@ -1,7 +1,7 @@
----
+﻿---
 title: 앨런 무어 왓치맨 해석: 슈퍼히어로 해체주의와 냉전 디스토피아의 걸작
 category: 코믹스, 그래픽노블
-image: "/images/authors/alan-moore.jpg"
+image: "/images/authors/watchmen.jpg"
 summary: "앨런 무어의 그래픽노블 왓치맨은 슈퍼히어로의 영웅 신화를 해체하고 냉전 시대의 디스토피아를 고발한 명작입니다. 로어셰크, 닥터 맨하탄 등 입체적 인물을 통해 권력과 정의의 본질을 분석합니다."
 keywords: "앨런 무어, 왓치맨, 로어셰크, 닥터 맨하탄, 슈퍼히어로 해체주의, DC 코믹스"
 ---
