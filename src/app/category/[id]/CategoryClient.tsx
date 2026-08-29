@@ -28,7 +28,9 @@ export default function CategoryClient() {
     notFound();
   }
 
-  const currentPage = page ? parseInt(page, 10) : 1;
+  // Parse page param defensively: guard against NaN, non-positive, or out-of-range values
+  const parsedPage = page ? parseInt(page, 10) : 1;
+  const currentPage = isNaN(parsedPage) || parsedPage < 1 ? 1 : parsedPage;
   const { items: posts, pagination } = getPaginatedPostsByCategory(categoryKorean, currentPage, 20);
   const intro = CATEGORY_INTRO[categoryKorean];
 
@@ -159,7 +161,7 @@ export default function CategoryClient() {
             {/* Prev Button */}
             {pagination.hasPrevPage ? (
               <Link
-                href={`/category/${id}?page=${pagination.currentPage - 1}`}
+                href={pagination.currentPage - 1 <= 1 ? `/category/${id}` : `/category/${id}?page=${pagination.currentPage - 1}`}
                 prefetch={false}
                 className="px-4 py-2 border border-gold/20 text-sepia-dark hover:bg-gold hover:text-cream rounded-md transition-all duration-300"
               >
@@ -179,7 +181,7 @@ export default function CategoryClient() {
                 return (
                   <Link
                     key={pageNum}
-                    href={`/category/${id}?page=${pageNum}`}
+                    href={pageNum === 1 ? `/category/${id}` : `/category/${id}?page=${pageNum}`}
                     prefetch={false}
                     className={`w-10 h-10 flex items-center justify-center border font-serif rounded-md transition-all duration-300 ${
                       isActive
