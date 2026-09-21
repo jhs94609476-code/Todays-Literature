@@ -1,9 +1,9 @@
 ---
-title: "존 레논 Imagine: 국가와 종교의 경계를 넘어 인류 평화를 노래한 불멸의 찬가"
-category: 음악, 역사
+title: 존 레논 Imagine: 국가와 종교의 경계를 넘어 인류 평화를 노래한 불멸의 찬가
 image: "/images/authors/john-lennon.jpg"
 summary: "1971년 발표된 존 레논의 대표작 Imagine이 지닌 반전 평화 메시지와 인문학적 가치를 조명합니다. 비틀즈 해체 이후 그가 남긴 가장 위대한 음악적 유산과 현대 사회에 던지는 통찰을 확인해 보세요."
 keywords: "존 레논, Imagine, 반전 평화, 싱어송라이터, 대중음악사, 팝 명곡"
+category: "음악, 역사"
 ---
 
 <h2>1. 절제된 선율 속에 담긴 혁명적 상상력: Imagine의 탄생</h2>

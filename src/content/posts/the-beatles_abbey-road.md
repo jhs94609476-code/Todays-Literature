@@ -1,9 +1,9 @@
 ---
-title: "더 비틀즈 Abbey Road: 밴드의 황혼기에서 완성한 불멸의 메들리와 예술적 결별"
-category: 음악, 역사
+title: 더 비틀즈 Abbey Road: 밴드의 황혼기에서 완성한 불멸의 메들리와 예술적 결별
 image: "/images/authors/the-beatles.jpg"
 summary: "더 비틀즈의 11번째 정규 앨범 Abbey Road는 극심한 불화 속에서도 대중음악사에 길이 남을 명작으로 완성되었습니다. B면을 수놓은 전설적인 애비 로드 메들리와 멤버들의 음악적 조화, 그리고 완벽했던 예술적 결별의 순간을 인문학적 시선으로 조명합니다."
 keywords: "더 비틀즈, Abbey Road, 애비 로드 메들리, 록 음악사, 폴 매카트니, 존 레논"
+category: "음악, 역사"
 ---
 
 <h2>1. 파경의 문턱에서 피워낸 가장 찬란한 조화: Abbey Road의 탄생 배경</h2>

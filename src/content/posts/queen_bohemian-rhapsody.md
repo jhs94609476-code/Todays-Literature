@@ -1,9 +1,9 @@
 ---
 title: 퀸(Queen)의 걸작 Bohemian Rhapsody와 A Night at the Opera: 록과 오페라의 혁신적 융합 및 프레디 머큐리의 예술혼
-category: 음악, 역사
 image: "/images/authors/queen.jpg"
 summary: "전설적인 밴드 퀸(Queen)의 1975년 명반 A Night at the Opera와 대표곡 Bohemian Rhapsody를 집중 조명합니다. 록 음악과 오페라의 파격적인 결합 과정, 프레디 머큐리가 담아낸 비극적 서사와 사운드 혁신의 가치를 인문학적 시선으로 분석합니다."
 keywords: "퀸, 보헤미안 랩소디, 프레디 머큐리, A Night at the Opera, 오페라 록, 명반"
+category: "음악, 역사"
 ---
 
 <h2>1. 벼랑 끝에서 피워낸 걸작: 1975년 퀸과 A Night at the Opera의 탄생</h2>

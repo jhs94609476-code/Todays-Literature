@@ -1,6 +1,6 @@
 ---
 title: 빌 에반스 Waltz for Debby - 서정적 피아니즘과 인터플레이의 정점
-category: 음악, 역사
+category: "음악, 역사"
 image: "/images/authors/bill-evans.jpg"
 summary: "모던 재즈 역사상 가장 서정적인 순간으로 꼽히는 빌 에반스 트리오의 1961년 라이브 명반 Waltz for Debby를 조명합니다. 피아노와 베이스, 드럼이 대등하게 호흡한 인터플레이의 미학과 빌 에반스의 독보적인 화성 감각을 깊이 있게 분석합니다."
 keywords: "빌 에반스, Waltz for Debby, 재즈 피아노, 빌 에반스 트리오, 모던 재즈, 인터플레이"

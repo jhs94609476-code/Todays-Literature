@@ -1,9 +1,9 @@
 ---
-title: "존 콜트레인 《A Love Supreme》: 재즈의 한계를 초월한 영적 구도와 색소폰의 서사시"
-category: 음악, 역사
+title: 존 콜트레인 《A Love Supreme》: 재즈의 한계를 초월한 영적 구도와 색소폰의 서사시
 image: "/images/authors/john-coltrane.jpg"
 summary: "존 콜트레인의 1965년 걸작 《A Love Supreme》은 모달 재즈의 화성적 확장을 넘어 영적 해방과 신을 향한 헌신을 기록한 음악사적 이정표입니다. 약물 중독의 고통을 딛고 절대자를 향한 감사로 승화된 4부작 모음곡의 구조적 완성도와 재즈 역사에 남긴 불멸의 유산을 심층 분석합니다."
 keywords: "존 콜트레인, A Love Supreme, 모달 재즈, 영적 재즈, 색소폰 명연주, 재즈 역사"
+category: "음악, 역사"
 ---
 
 <h2>1. 절망의 나락에서 피어난 거룩한 각성: 존 콜트레인의 영적 회심</h2>
