@@ -1,6 +1,6 @@
 ---
 title: 생각에 관한 생각 대니얼 카너먼의 행동경제학과 인지 편향, 직관과 판단의 메커니즘
-image: "/images/authors/daniel-kahneman.jpg"
+image: "/images/authors/daniel-kahneman.jpeg"
 summary: 대니얼 카너먼의 생각에 관한 생각을 중심으로 행동경제학의 핵심인 시스템 1과 시스템 2, 휴리스틱과 전망이론을 살펴봅니다. 직관과 판단의 오류를 줄이고 더 나은 의사결정을 내리기 위한 인지 편향 극복 방안을 정리했습니다.
 keywords: 행동경제학, 인지 편향, 시스템 1과 2, 전망이론, 휴리스틱
 category: "철학, 사상"

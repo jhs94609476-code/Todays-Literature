@@ -1,6 +1,6 @@
 ---
 title: 쇼팽 혁명 에튀드와 쇼팽 연습곡: 피아노의 시인이 조국애로 완성한 낭만주의 피아노의 정점
-image: "/images/authors/frederic-chopin.jpg"
+image: "/images/authors/frederic-chopin.jpeg"
 summary: 쇼팽 혁명 에튀드(Op. 10 No. 12)는 피아노의 시인 프레데리크 쇼팽이 조국 폴란드의 바르샤바 함락 소식을 접하고 폭발시킨 비통함과 분노의 기록입니다. 11월 봉기의 좌절 속에서 탄생한 이 걸작의 역사적 배경과 낭만주의 피아노 음악사적 의의를 깊이 있게 분석합니다.
 keywords: 쇼팽 혁명 에튀드, 쇼팽 연습곡, 피아노의 시인, 조국애, 낭만주의 피아노
 category: "음악, 역사"

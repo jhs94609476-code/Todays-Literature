@@ -1,6 +1,6 @@
 ---
 title: 세상의 마지막 기차역 무라세 다케시가 전하는 상실과 치유의 애도 감동 소설
-image: "/images/authors/takeshi-murase.jpg"
+image: "/images/authors/takeshi-murase.jpeg"
 summary: 무라세 다케시의 감동 소설 세상의 마지막 기차역은 비극적인 열차 탈선 사고로 사랑하는 이를 잃은 유족들의 상실과 치유를 다룬 작품입니다. 과거로 돌아가는 유령 열차라는 환상적 설정을 통해 온전한 애도와 가족애의 가치를 전하며 깊은 울림을 선사합니다.
 keywords: 세상의 마지막 기차역, 무라세 다케시, 상실과 치유, 애도, 감동 소설
 category: "문학, 시"

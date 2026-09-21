@@ -1,6 +1,6 @@
 ---
 title: 돈의 심리학으로 읽는 부의 마인드셋: 모건 하우절이 밝힌 복리의 힘과 투자 멘탈의 본질
-image: "/images/authors/morgan-housel.jpg"
+image: "/images/authors/morgan-housel.jpeg"
 summary: 부의 축적은 정교한 금융 지식이 아닌 감정을 다스리는 태도와 인내심에 달려 있습니다. 모건 하우절의 돈의 심리학을 통해 복리의 힘을 실현하는 투자 멘탈과 장기적인 리스크 관리 원칙을 살펴봅니다.
 keywords: 돈의 심리학, 모건 하우절, 부의 마인드셋, 복리의 힘, 투자 멘탈
 category: "경제, 자본"

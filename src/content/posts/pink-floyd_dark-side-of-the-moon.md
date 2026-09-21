@@ -1,6 +1,6 @@
 ---
 title: 핑크 플로이드 Dark Side of the Moon 해석: 소외와 광기, 자본주의 비판을 담은 프로그레시브 록 명반
-image: "/images/authors/pink-floyd.jpg"
+image: "/images/authors/pink-floyd.jpeg"
 summary: 핑크 플로이드의 불멸의 걸작 Dark Side of the Moon은 현대 자본주의의 소외와 시간의 압박, 물질적 탐욕을 해부한 프로그레시브 록 명반입니다. 앨범 전반을 관통하는 콘셉트와 수록곡들이 던지는 실존적 메시지를 심도 있게 분석합니다.
 keywords: 핑크 플로이드, Dark Side of the Moon, 프로그레시브 록, 콘셉트 앨범, 광기, 소외, 자본주의 비판
 category: "음악, 역사"

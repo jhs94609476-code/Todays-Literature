@@ -1,6 +1,6 @@
 ---
 title: 너바나와 커트 코베인, Nevermind가 촉발한 그런지 록과 X세대의 저항
-image: "/images/authors/nirvana.jpg"
+image: "/images/authors/nirvana.jpeg"
 summary: 1991년 너바나의 Nevermind 앨범은 기성세대의 상업주의와 위선에 환멸을 느끼던 X세대의 비명을 세상 밖으로 끌어냈습니다. 그런지 록의 거센 파동과 커트 코베인이 남긴 저항의 서사를 인문학적 시선으로 분석합니다.
 keywords: 너바나, 커트 코베인, Nevermind, 그런지 록, X세대의 저항
 category: "음악, 역사"

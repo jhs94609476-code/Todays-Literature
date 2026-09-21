@@ -1,6 +1,6 @@
 ---
 title: 기억전달자 서평 로이스 로우리가 경고한 감정 통제 사회 디스토피아와 자유의지
-image: "/images/authors/lois-lowry.jpg"
+image: "/images/authors/lois-lowry.jpeg"
 summary: 로이스 로우리의 소설 기억전달자를 통해 고통과 갈등을 없앤 완벽한 통제사회가 왜 파멸적인 디스토피아인지 분석합니다. 개성과 감정을 박탈당한 전체주의 시스템 속에서 인간성의 회복과 자유의지가 지닌 진정한 가치를 고찰합니다.
 keywords: 디스토피아, 기억 전달, 전체주의, 개성, 인간성의 회복
 category: "문학, 시"

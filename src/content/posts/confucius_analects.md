@@ -1,6 +1,6 @@
 ---
 title: 논어와 공자의 가르침: 인(仁)과 예(禮)로 완성하는 군자의 품격과 인간관계 지혜
-image: "/images/authors/confucius.jpg"
+image: "/images/authors/confucius.jpeg"
 summary: 공자의 핵심 사상인 인(仁)과 예(禮)를 현대적 관점에서 조명하고, 수기치인과 덕치를 통해 군자의 품격을 갖추는 방법을 탐구합니다. 복잡한 현대 사회 속에서 상호 존중과 신뢰를 회복하는 실천적 인간관계 지혜를 전합니다.
 keywords: 논어, 공자, 인, 예, 군자, 수기치인, 덕치
 category: "철학, 사상"

@@ -1,6 +1,6 @@
 ---
 title: 영화음악 거장 엔니오 모리코네, 시네마 천국 OST와 가브리엘의 오보에가 부르는 노스탤지어
-image: "/images/authors/ennio-morricone.jpg"
+image: "/images/authors/ennio-morricone.jpeg"
 summary: 20세기 영화음악의 거장 엔니오 모리코네가 남긴 불멸의 선율을 인문학적 시선으로 조명합니다. 시네마 천국 OST에 담긴 유년의 노스탤지어부터 미션의 가브리엘의 오보에가 선사하는 숭고함까지, 스크린을 넘어 인간의 신념을 울린 음악의 힘을 분석합니다.
 keywords: 엔니오 모리코네, 시네마 천국 OST, 영화음악 거장, 가브리엘의 오보에, 노스탤지어
 category: "음악, 역사"

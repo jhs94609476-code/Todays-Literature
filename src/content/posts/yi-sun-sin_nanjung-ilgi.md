@@ -1,6 +1,6 @@
 ---
 title: 난중일기 속 이순신의 고뇌와 리더십, 임진왜란이 드러낸 인간적 면모
-image: "/images/authors/yi-sun-sin.jpg"
+image: "/images/authors/yi-sun-sin.jpeg"
 summary: 임진왜란의 소용돌이 속에서 쓰인 난중일기를 통해 불패의 성웅 이면에 자리했던 이순신의 고뇌와 책임감, 진솔한 인간적 면모를 조명합니다. 흔들리는 현실 속에서도 원칙과 충의를 지켜낸 진정한 리더십의 본질을 분석합니다.
 keywords: 임진왜란, 난중일기, 이순신, 고뇌, 리더십, 인간적 면모, 충의
 category: "문학, 시"

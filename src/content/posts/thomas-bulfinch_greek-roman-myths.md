@@ -1,6 +1,6 @@
 ---
 title: 그리스 로마 신화와 토머스 불핀치: 올림포스 신들과 영웅 서사로 읽는 인문학 원형
-image: "/images/authors/thomas-bulfinch.jpg"
+image: "/images/authors/thomas-bulfinch.jpeg"
 summary: 그리스 로마 신화는 서구 문학과 예술의 모태이자 인간 본성을 탐구하는 인문학의 뿌리입니다. 19세기 토머스 불핀치가 정리한 올림포스 신들의 이야기와 영웅 서사를 통해 오만과 파멸, 그리고 현대 심리학의 원형 심리를 입체적으로 분석합니다.
 keywords: 그리스 로마 신화, 토머스 불핀치, 올림포스, 영웅 서사, 인문학의 뿌리
 category: "문학, 시"

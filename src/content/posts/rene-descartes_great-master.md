@@ -1,6 +1,6 @@
 ---
 title: 데카르트 나는 생각한다 고로 존재한다: 방법적 회의와 코기토로 연 근대 합리주의 철학
-image: "/images/authors/rené-descartes.jpg"
+image: "/images/authors/rene-descartes.jpg"
 summary: "근대 철학의 아버지 르네 데카르트의 방법서설과 방법적 회의를 탐구합니다. 모든 것을 의심한 끝에 도달한 코기토 명제와 근대 이성주의의 탄생 과정을 깊이 있게 살펴봅니다."
 keywords: "데카르트, 방법서설, 방법적 회의, 코기토, 근대 이성주의, 철학의 아버지"
 category: "시대의 거장들"
