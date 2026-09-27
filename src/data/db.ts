@@ -70,8 +70,13 @@ export const CATEGORY_INTRO: { [key: string]: { desc: string; banner: string } }
 
 export function getAllPosts(): Post[] {
   // Sort posts by date descending, then by slug
+  // Guard against NaN dates (invalid date strings fall back to 0)
   return [...postsData as Post[]].sort((a, b) => {
-    const dateCompare = new Date(b.date).getTime() - new Date(a.date).getTime();
+    const aTime = new Date(a.date).getTime();
+    const bTime = new Date(b.date).getTime();
+    const aValid = isNaN(aTime) ? 0 : aTime;
+    const bValid = isNaN(bTime) ? 0 : bTime;
+    const dateCompare = bValid - aValid;
     if (dateCompare !== 0) return dateCompare;
     return a.slug.localeCompare(b.slug);
   });

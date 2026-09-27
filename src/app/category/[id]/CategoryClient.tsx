@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useParams, useSearchParams, notFound } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 import { CATEGORY_MAP, CATEGORY_INTRO, getPaginatedPostsByCategory } from "@/data/db";
 import { Calendar, User, ArrowRight, Info } from "lucide-react";
 import CoupangStaticAd from "@/components/CoupangStaticAd";
@@ -16,22 +16,36 @@ function RotatingAd({ adIndex }: { adIndex: number }) {
   return <CoupangStaticAd type="bottom" />;
 }
 
-export default function CategoryClient() {
-  const params = useParams();
-  const searchParams = useSearchParams();
-  
-  const id = params.id as string;
-  const page = searchParams.get("page");
-  
-  const categoryKorean = CATEGORY_MAP[id];
-  if (!categoryKorean) {
-    notFound();
-  }
+interface CategoryClientProps {
+  /** page.tsx 서버 컴포넌트에서 내려주는 카테고리 slug (useParams() 하이드레이션 레이스 방지) */
+  categoryId: string;
+}
 
-  // Parse page param defensively: guard against NaN, non-positive, or out-of-range values
-  const parsedPage = page ? parseInt(page, 10) : 1;
-  const currentPage = isNaN(parsedPage) || parsedPage < 1 ? 1 : parsedPage;
-  const { items: posts, pagination } = getPaginatedPostsByCategory(categoryKorean, currentPage, 20);
+export default function CategoryClient({ categoryId }: CategoryClientProps) {
+  const searchParams = useSearchParams();
+
+  const id = categoryId;
+  const categoryKorean = CATEGORY_MAP[id];
+
+  // 방어: 잘못된 카테고리는 아무것도 렌더하지 않음 (page.tsx에서 이미 notFound 처리)
+  if (!categoryKorean) return null;
+
+  // ── currentPage 결정 ──────────────────────────────────────────────
+  // output:'export' SSG 환경에서는 정적 HTML이 항상 page=1 껍데기로 빌드됨.
+  // useSearchParams()는 클라이언트 하이드레이션 후에만 실제 값을 반환하므로
+  // 아래 파싱 + clamping이 런타임 진입점 역할을 한다.
+  const rawPage = searchParams.get("page");
+  const parsedPage = rawPage ? parseInt(rawPage, 10) : 1;
+  // NaN·0 이하·Infinity 등 비정상 값은 모두 1로 고정
+  const requestedPage = Number.isFinite(parsedPage) && parsedPage >= 1 ? parsedPage : 1;
+
+  const { items: posts, pagination } = getPaginatedPostsByCategory(
+    categoryKorean,
+    requestedPage,
+    20
+  );
+  // db.ts의 getPaginatedPostsByCategory 내부에서 Math.max(1, Math.min(page, totalPages))로
+  // 이미 clamping 하지만, currentPage는 pagination.currentPage를 신뢰함(이중 방어)
   const intro = CATEGORY_INTRO[categoryKorean];
 
   return (
@@ -158,10 +172,14 @@ export default function CategoryClient() {
         {/* Pagination Controls */}
         {pagination.totalPages > 1 && (
           <nav className="flex justify-center items-center gap-2 mt-12 border-t border-gold/10 pt-8" aria-label="Pagination">
-            {/* Prev Button */}
+            {/* Prev Button — 1페이지로 갈 때는 ?page= 쿼리 없이 순수 경로로 */}
             {pagination.hasPrevPage ? (
               <Link
-                href={pagination.currentPage - 1 <= 1 ? `/category/${id}` : `/category/${id}?page=${pagination.currentPage - 1}`}
+                href={
+                  pagination.currentPage - 1 <= 1
+                    ? `/category/${id}`
+                    : `/category/${id}?page=${pagination.currentPage - 1}`
+                }
                 prefetch={false}
                 className="px-4 py-2 border border-gold/20 text-sepia-dark hover:bg-gold hover:text-cream rounded-md transition-all duration-300"
               >
@@ -173,7 +191,7 @@ export default function CategoryClient() {
               </span>
             )}
 
-            {/* Page Numbers */}
+            {/* Page Numbers — 1페이지는 항상 쿼리 없는 순수 경로 */}
             <div className="flex gap-1.5">
               {Array.from({ length: pagination.totalPages }, (_, index) => {
                 const pageNum = index + 1;

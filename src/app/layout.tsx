@@ -72,6 +72,18 @@ export default function RootLayout({
     >
       <head>
         <script src="https://cdn.tailwindcss.com"></script>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "name": "오늘의 문학",
+              "alternateName": ["Todays Literature"],
+              "url": baseUrl,
+            }),
+          }}
+        />
       </head>
       <body className="min-h-full flex flex-col bg-cream text-sepia-dark selection:bg-gold-light/20 selection:text-sepia-dark">
         <Navbar />

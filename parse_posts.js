@@ -50,6 +50,7 @@ function getAuthorImage(slug) {
 }
 
 const files = fs.readdirSync(postsDir).filter(f => f.endsWith('.md'));
+const totalFiles = files.length; // 전체 파일 수 기반으로 날짜 분산 할당
 const posts = [];
 
 files.forEach((file, index) => {
@@ -117,7 +118,15 @@ files.forEach((file, index) => {
       else if (category === '코믹스, 그래픽노블') coverImage = '/images/cat_comics.png';
     }
 
-    const date = metadata.date || `2026-07-${String(Math.max(1, 30 - index)).padStart(2, '0')}`;
+    // date 폴백: 파일 수가 많아도 날짜가 몰리지 않도록 총 파일 수 기반으로 분산 할당
+    // (index 0 → 가장 최근, index totalFiles-1 → 가장 오래된)
+    const fallbackDay = Math.max(1, Math.min(28, Math.round(28 - (index / Math.max(totalFiles - 1, 1)) * 27)));
+    const fallbackMonth = index < Math.floor(totalFiles / 2) ? '09' : '07';
+    const rawDate = metadata.date || '';
+    const parsedDateMs = rawDate ? new Date(rawDate).getTime() : NaN;
+    const date = (!rawDate || isNaN(parsedDateMs))
+      ? `2026-${fallbackMonth}-${String(fallbackDay).padStart(2, '0')}`
+      : rawDate;
     const author = metadata.author || (category === '시대의 거장들' ? '거장 편집부' : '인문학 편집부');
 
     posts.push({

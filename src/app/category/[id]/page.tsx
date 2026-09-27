@@ -1,6 +1,7 @@
 import { CATEGORY_MAP } from "@/data/db";
 import CategoryClient from "./CategoryClient";
 import { Suspense } from "react";
+import { notFound } from "next/navigation";
 
 interface CategoryPageProps {
   params: Promise<{ id: string }>;
@@ -35,13 +36,25 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
 }
 
 export default async function CategoryPage({ params }: CategoryPageProps) {
+  const { id } = await params;
+
+  // 서버에서 카테고리 유효성 확인 (정적 내보내기에서도 동작)
+  if (!CATEGORY_MAP[id]) {
+    notFound();
+  }
+
   return (
-    <Suspense fallback={
-      <div className="min-h-screen flex items-center justify-center bg-cream">
-        <p className="font-serif text-sepia-muted animate-pulse">카테고리를 불러오는 중입니다...</p>
-      </div>
-    }>
-      <CategoryClient />
+    // key={id}로 카테고리 전환 시 Suspense 트리 전체 강제 리마운트
+    // → useSearchParams() 캐시 스테일 방지, currentPage 항상 1부터 시작
+    <Suspense
+      key={id}
+      fallback={
+        <div className="min-h-screen flex items-center justify-center bg-cream">
+          <p className="font-serif text-sepia-muted animate-pulse">카테고리를 불러오는 중입니다...</p>
+        </div>
+      }
+    >
+      <CategoryClient categoryId={id} />
     </Suspense>
   );
 }
