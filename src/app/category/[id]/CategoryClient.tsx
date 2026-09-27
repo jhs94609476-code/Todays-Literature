@@ -1,8 +1,9 @@
 "use client";
 
+import { useCallback } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { useSearchParams } from "next/navigation";
+import { useSearchParams, useRouter } from "next/navigation";
 import { CATEGORY_MAP, CATEGORY_INTRO, getPaginatedPostsByCategory } from "@/data/db";
 import { Calendar, User, ArrowRight, Info } from "lucide-react";
 import CoupangStaticAd from "@/components/CoupangStaticAd";
@@ -23,12 +24,28 @@ interface CategoryClientProps {
 
 export default function CategoryClient({ categoryId }: CategoryClientProps) {
   const searchParams = useSearchParams();
+  const router = useRouter();
 
   const id = categoryId;
+  const encodedId = encodeURIComponent(id);
   const categoryKorean = CATEGORY_MAP[id];
 
   // 방어: 잘못된 카테고리는 아무것도 렌더하지 않음 (page.tsx에서 이미 notFound 처리)
   if (!categoryKorean) return null;
+
+  // ── navigateTo 헬퍼 ──────────────────────────────────────────────
+  // SSG(output:'export') 환경에서 <Link href="?page=N">은 대응 HTML 파일이 없어
+  // 라우팅이 중단된다. useRouter().push()로 클라이언트 사이드 전환을 강제한다.
+  const navigateTo = useCallback(
+    (page: number) => {
+      const url =
+        page <= 1
+          ? `/category/${encodedId}`
+          : `/category/${encodedId}?page=${page}`;
+      router.push(url);
+    },
+    [router, encodedId]
+  );
 
   // ── currentPage 결정 ──────────────────────────────────────────────
   // output:'export' SSG 환경에서는 정적 HTML이 항상 page=1 껍데기로 빌드됨.
@@ -172,35 +189,29 @@ export default function CategoryClient({ categoryId }: CategoryClientProps) {
         {/* Pagination Controls */}
         {pagination.totalPages > 1 && (
           <nav className="flex justify-center items-center gap-2 mt-12 border-t border-gold/10 pt-8" aria-label="Pagination">
-            {/* Prev Button — 1페이지로 갈 때는 ?page= 쿼리 없이 순수 경로로 */}
+            {/* Prev Button */}
             {pagination.hasPrevPage ? (
-              <Link
-                href={
-                  pagination.currentPage - 1 <= 1
-                    ? `/category/${id}`
-                    : `/category/${id}?page=${pagination.currentPage - 1}`
-                }
-                prefetch={false}
+              <button
+                onClick={() => navigateTo(pagination.currentPage - 1)}
                 className="px-4 py-2 border border-gold/20 text-sepia-dark hover:bg-gold hover:text-cream rounded-md transition-all duration-300"
               >
                 이전
-              </Link>
+              </button>
             ) : (
               <span className="px-4 py-2 border border-gold/5 text-sepia-muted/40 cursor-not-allowed rounded-md">
                 이전
               </span>
             )}
 
-            {/* Page Numbers — 1페이지는 항상 쿼리 없는 순수 경로 */}
+            {/* Page Numbers */}
             <div className="flex gap-1.5">
               {Array.from({ length: pagination.totalPages }, (_, index) => {
                 const pageNum = index + 1;
                 const isActive = pageNum === pagination.currentPage;
                 return (
-                  <Link
+                  <button
                     key={pageNum}
-                    href={pageNum === 1 ? `/category/${id}` : `/category/${id}?page=${pageNum}`}
-                    prefetch={false}
+                    onClick={() => navigateTo(pageNum)}
                     className={`w-10 h-10 flex items-center justify-center border font-serif rounded-md transition-all duration-300 ${
                       isActive
                         ? "bg-gold border-gold text-cream font-bold"
@@ -208,20 +219,19 @@ export default function CategoryClient({ categoryId }: CategoryClientProps) {
                     }`}
                   >
                     {pageNum}
-                  </Link>
+                  </button>
                 );
               })}
             </div>
 
             {/* Next Button */}
             {pagination.hasNextPage ? (
-              <Link
-                href={`/category/${id}?page=${pagination.currentPage + 1}`}
-                prefetch={false}
+              <button
+                onClick={() => navigateTo(pagination.currentPage + 1)}
                 className="px-4 py-2 border border-gold/20 text-sepia-dark hover:bg-gold hover:text-cream rounded-md transition-all duration-300"
               >
                 다음
-              </Link>
+              </button>
             ) : (
               <span className="px-4 py-2 border border-gold/5 text-sepia-muted/40 cursor-not-allowed rounded-md">
                 다음

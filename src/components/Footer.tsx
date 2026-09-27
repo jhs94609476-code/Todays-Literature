@@ -19,6 +19,15 @@ export default function Footer() {
               인문학, 철학, 역사, 문학을 다루는 수익형 프리미엄 웹 매거진. 
               시대를 초월한 거장들의 사유를 매일 전달하여 우리의 내면을 풍요롭게 가꿉니다.
             </p>
+            <p className="text-xs text-cream/50">
+              비즈니스 문의:{" "}
+              <a
+                href="mailto:jhs94609476@gmail.com"
+                className="text-gold-light hover:text-gold underline underline-offset-2 transition-colors duration-200"
+              >
+                jhs94609476@gmail.com
+              </a>
+            </p>
           </div>
 
           {/* Categories Links */}
