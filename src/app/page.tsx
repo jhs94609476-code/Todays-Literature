@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
-import { getPostsByCategory, REVERSE_CATEGORY_MAP } from "@/data/db";
+import { getPostsByCategory } from "@/data/db";
+import { buildCategoryHref } from "@/lib/category";
 import { ArrowRight, Calendar, User } from "lucide-react";
 
 const CATEGORIES = [
@@ -61,7 +62,7 @@ export default function Home() {
                   </h2>
                 </div>
                 <Link
-                  href={`/category/${category.slug}`}
+                  href={buildCategoryHref(category.slug)}
                   prefetch={false}
                   className="group inline-flex items-center gap-1 text-sm font-medium text-gold hover:text-gold-light transition-colors"
                 >

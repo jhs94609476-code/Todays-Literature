@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useSearchParams, useRouter } from "next/navigation";
 import { CATEGORY_MAP, CATEGORY_INTRO, getPaginatedPostsByCategory } from "@/data/db";
+import { buildCategoryHref } from "@/lib/category";
 import { Calendar, User, ArrowRight, Info } from "lucide-react";
 import CoupangStaticAd from "@/components/CoupangStaticAd";
 import CoupangAd from "@/components/CoupangAd";
@@ -23,29 +24,24 @@ interface CategoryClientProps {
 }
 
 export default function CategoryClient({ categoryId }: CategoryClientProps) {
+  // ── 모든 훅은 조건문 이전에 선언해야 한다 (React 훅 규칙) ──────────
   const searchParams = useSearchParams();
   const router = useRouter();
-
-  const id = categoryId;
-  const encodedId = encodeURIComponent(id);
-  const categoryKorean = CATEGORY_MAP[id];
-
-  // 방어: 잘못된 카테고리는 아무것도 렌더하지 않음 (page.tsx에서 이미 notFound 처리)
-  if (!categoryKorean) return null;
 
   // ── navigateTo 헬퍼 ──────────────────────────────────────────────
   // SSG(output:'export') 환경에서 <Link href="?page=N">은 대응 HTML 파일이 없어
   // 라우팅이 중단된다. useRouter().push()로 클라이언트 사이드 전환을 강제한다.
+  // buildCategoryHref()가 URL 인코딩과 경로 조합을 담당한다.
   const navigateTo = useCallback(
     (page: number) => {
-      const url =
-        page <= 1
-          ? `/category/${encodedId}`
-          : `/category/${encodedId}?page=${page}`;
-      router.push(url);
+      router.push(buildCategoryHref(categoryId, page));
     },
-    [router, encodedId]
+    [router, categoryId]
   );
+
+  // ── 유효성 검사는 모든 훅 선언 이후에 수행 ───────────────────────
+  const categoryKorean = CATEGORY_MAP[categoryId];
+  if (!categoryKorean) return null;
 
   // ── currentPage 결정 ──────────────────────────────────────────────
   // output:'export' SSG 환경에서는 정적 HTML이 항상 page=1 껍데기로 빌드됨.

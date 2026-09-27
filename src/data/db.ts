@@ -128,12 +128,14 @@ export function getRelatedPosts(categoryName: string, currentSlugOrId: string, l
     .slice(0, limit);
 }
 
+// NAV_ITEMS: buildCategoryHref를 통해 일관된 URL 생성
+// href는 /category/{slug} 형태로, slug는 항상 ASCII이므로 인코딩 불변
 export const NAV_ITEMS = [
-  { label: "철학, 사상", href: "/category/philosophy" },
-  { label: "문학, 시", href: "/category/poetry" },
-  { label: "음악, 역사", href: "/category/history" },
-  { label: "현대 에세이, 삶", href: "/category/essay" },
-  { label: "시대의 거장들", href: "/category/masters" },
-  { label: "경제, 자본", href: "/category/economics" },
-  { label: "코믹스, 그래픽노블", href: "/category/comics" },
+  { label: "철학, 사상",       href: "/category/philosophy" },
+  { label: "문학, 시",         href: "/category/poetry"     },
+  { label: "음악, 역사",       href: "/category/history"    },
+  { label: "현대 에세이, 삶",  href: "/category/essay"      },
+  { label: "시대의 거장들",    href: "/category/masters"    },
+  { label: "경제, 자본",       href: "/category/economics"  },
+  { label: "코믹스, 그래픽노블", href: "/category/comics"   },
 ];
