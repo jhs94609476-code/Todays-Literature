@@ -5,6 +5,7 @@ import { getPostBySlug, getPostById, getRelatedPosts, REVERSE_CATEGORY_MAP, getA
 import { Calendar, User, ArrowLeft, Bookmark, Heart, Share2, Info } from "lucide-react";
 import CoupangAd from "@/components/CoupangAd";
 import CoupangStaticAd from "@/components/CoupangStaticAd";
+import CoupangPartnerCards from "@/components/CoupangPartnerCards";
 
 interface PostPageProps {
   params: Promise<{ slug: string }>;
@@ -245,6 +246,9 @@ export default async function PostPage({ params }: PostPageProps) {
               return renderHtmlBlock(block, index);
             })}
           </div>
+
+          {/* 쿠팡 파트너스 추천 카드 (키링 / 도서 / 독서등) */}
+          <CoupangPartnerCards />
 
           {/* 🚨 Bottom Coupang Partners Notice */}
           <div className="mt-10 pt-4 pb-4 text-center border-t border-gold/10">
