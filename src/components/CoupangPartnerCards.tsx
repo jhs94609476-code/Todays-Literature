@@ -323,9 +323,8 @@ function KeyringCard() {
           <div className="cp-insta-img-box">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="https://thumbnail8.coupangcdn.com/thumbnails/remote/492x492ex/image/retail/images/2024/05/27/15/2/23e9a7e8-7ba4-41d3-a417-ea76d29b05f6.jpg"
+              src="/images/keyring.jpg"
               alt="다다랜드 몽실구름 복슬 인형 데일리 키링"
-              referrerPolicy="no-referrer"
             />
           </div>
 
@@ -360,9 +359,8 @@ function BookCard() {
           <div className="cp-book-img-box">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="https://thumbnail6.coupangcdn.com/thumbnails/remote/492x492ex/image/retail-product-api/A00077021/80517592/89369911/main/9791192931210_L.jpg"
+              src="/images/book.jpg"
               alt="인생 망치지 않고 웬만큼 잘 사는 법"
-              referrerPolicy="no-referrer"
             />
             <span className="cp-book-badge">⚡ 현실 직시 필독서</span>
           </div>
@@ -397,9 +395,8 @@ function LightCard() {
           <div className="cp-light-img-box">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="https://thumbnail7.coupangcdn.com/thumbnails/remote/492x492ex/image/retail/images/2023/11/02/10/4/b1b36be9-3351-4db5-9e6e-07eb2944b58e.jpg"
+              src="/images/booklight.jpg"
               alt="휴대용 충전식 미니 독서등 북라이트"
-              referrerPolicy="no-referrer"
             />
             <span className="cp-light-badge">🌙 야간 독서 필수템</span>
           </div>
