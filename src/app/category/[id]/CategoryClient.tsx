@@ -7,15 +7,14 @@ import { useSearchParams, useRouter } from "next/navigation";
 import { CATEGORY_MAP, CATEGORY_INTRO, getPaginatedPostsByCategory } from "@/data/db";
 import { buildCategoryHref } from "@/lib/category";
 import { Calendar, User, ArrowRight, Info } from "lucide-react";
-import CoupangStaticAd from "@/components/CoupangStaticAd";
-import CoupangAd from "@/components/CoupangAd";
+import CoupangPartnerCards from "@/components/CoupangPartnerCards";
 
-// 광고 3종 순환 렌더 헬퍼
+// 추천 카드 3종 순환 렌더 헬퍼
 function RotatingAd({ adIndex }: { adIndex: number }) {
-  const slot = adIndex % 3; // 0 → Ad1, 1 → Ad2, 2 → Ad3
-  if (slot === 0) return <CoupangStaticAd type="top" />;
-  if (slot === 1) return <CoupangAd />;
-  return <CoupangStaticAd type="bottom" />;
+  const slot = adIndex % 3; // 0 → 키링, 1 → 도서, 2 → 독서등
+  if (slot === 0) return <CoupangPartnerCards variant="keyring" />;
+  if (slot === 1) return <CoupangPartnerCards variant="book" />;
+  return <CoupangPartnerCards variant="light" />;
 }
 
 interface CategoryClientProps {

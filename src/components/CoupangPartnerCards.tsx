@@ -1,15 +1,6 @@
 'use client';
 
-import type { SyntheticEvent } from 'react';
-
-/* 이미지 로드 실패 시 대체 이미지로 교체 (무한 루프 방지) */
-const fallbackTo = (url: string) => (e: SyntheticEvent<HTMLImageElement>) => {
-  const img = e.currentTarget;
-  img.onerror = null;
-  img.src = url;
-};
-
-const CARD_CSS = `
+const INSTA_CSS = `
   .cp-insta-card {
     margin: 48px auto;
     max-width: 480px; /* 정방형 비율이 가장 예쁘게 잡히는 가로 폭 */
@@ -111,7 +102,9 @@ const CARD_CSS = `
   .cp-insta-card:hover .cp-insta-btn {
     opacity: 0.92;
   }
+`;
 
+const BOOK_CSS = `
   .cp-book-card {
     margin: 48px auto;
     max-width: 480px;
@@ -210,7 +203,9 @@ const CARD_CSS = `
   .cp-book-card:hover .cp-book-btn {
     opacity: 0.92;
   }
+`;
 
+const LIGHT_CSS = `
   .cp-light-card {
     margin: 48px auto;
     max-width: 480px;
@@ -311,17 +306,17 @@ const CARD_CSS = `
   }
 `;
 
-export default function CoupangPartnerCards() {
+function KeyringCard() {
   return (
     <>
-      <style>{CARD_CSS}</style>
+      <style>{INSTA_CSS}</style>
 
       {/* 쿠팡 파트너스 SNS 피드형 정사각형 카드 (다다랜드 몽실구름 키링) */}
       <div className="cp-insta-card">
         <a
           href="https://link.coupang.com/a/hzxzJ4YTC0"
           target="_blank"
-          rel="nofollow sponsored noopener noreferrer"
+          rel="nofollow sponsored noopener"
           className="cp-insta-link"
         >
           {/* SNS 1:1 정사각형 썸네일 */}
@@ -331,7 +326,6 @@ export default function CoupangPartnerCards() {
               src="https://thumbnail8.coupangcdn.com/thumbnails/remote/492x492ex/image/retail/images/2024/05/27/15/2/23e9a7e8-7ba4-41d3-a417-ea76d29b05f6.jpg"
               alt="다다랜드 몽실구름 복슬 인형 데일리 키링"
               referrerPolicy="no-referrer"
-              onError={fallbackTo('https://placehold.co/480x480?text=KEYRING')}
             />
           </div>
 
@@ -346,13 +340,21 @@ export default function CoupangPartnerCards() {
           </div>
         </a>
       </div>
+    </>
+  );
+}
+
+function BookCard() {
+  return (
+    <>
+      <style>{BOOK_CSS}</style>
 
       {/* 쿠팡 파트너스 추천 카드 (도서: 인생 망치지 않고 웬만큼 잘 사는 법) */}
       <div className="cp-book-card">
         <a
           href="https://link.coupang.com/a/hzyu26oDPU"
           target="_blank"
-          rel="nofollow sponsored noopener noreferrer"
+          rel="nofollow sponsored noopener"
           className="cp-book-link"
         >
           <div className="cp-book-img-box">
@@ -361,7 +363,6 @@ export default function CoupangPartnerCards() {
               src="https://thumbnail6.coupangcdn.com/thumbnails/remote/492x492ex/image/retail-product-api/A00077021/80517592/89369911/main/9791192931210_L.jpg"
               alt="인생 망치지 않고 웬만큼 잘 사는 법"
               referrerPolicy="no-referrer"
-              onError={fallbackTo('https://placehold.co/480x480?text=BOOK')}
             />
             <span className="cp-book-badge">⚡ 현실 직시 필독서</span>
           </div>
@@ -376,13 +377,21 @@ export default function CoupangPartnerCards() {
           </div>
         </a>
       </div>
+    </>
+  );
+}
+
+function LightCard() {
+  return (
+    <>
+      <style>{LIGHT_CSS}</style>
 
       {/* 쿠팡 파트너스 추천 카드 (실용템: 휴대용 미니 독서등) */}
       <div className="cp-light-card">
         <a
           href="https://link.coupang.com/a/hzyx3YwlZQ"
           target="_blank"
-          rel="nofollow sponsored noopener noreferrer"
+          rel="nofollow sponsored noopener"
           className="cp-light-link"
         >
           <div className="cp-light-img-box">
@@ -391,7 +400,6 @@ export default function CoupangPartnerCards() {
               src="https://thumbnail7.coupangcdn.com/thumbnails/remote/492x492ex/image/retail/images/2023/11/02/10/4/b1b36be9-3351-4db5-9e6e-07eb2944b58e.jpg"
               alt="휴대용 충전식 미니 독서등 북라이트"
               referrerPolicy="no-referrer"
-              onError={fallbackTo('https://placehold.co/480x480?text=BOOKLIGHT')}
             />
             <span className="cp-light-badge">🌙 야간 독서 필수템</span>
           </div>
@@ -408,4 +416,12 @@ export default function CoupangPartnerCards() {
       </div>
     </>
   );
+}
+
+export type CoupangCardVariant = 'keyring' | 'book' | 'light';
+
+export default function CoupangPartnerCards({ variant }: { variant: CoupangCardVariant }) {
+  if (variant === 'keyring') return <KeyringCard />;
+  if (variant === 'book') return <BookCard />;
+  return <LightCard />;
 }

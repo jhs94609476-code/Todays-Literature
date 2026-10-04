@@ -3,8 +3,6 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getPostBySlug, getPostById, getRelatedPosts, REVERSE_CATEGORY_MAP, getAllPosts } from "@/data/db";
 import { Calendar, User, ArrowLeft, Bookmark, Heart, Share2, Info } from "lucide-react";
-import CoupangAd from "@/components/CoupangAd";
-import CoupangStaticAd from "@/components/CoupangStaticAd";
 import CoupangPartnerCards from "@/components/CoupangPartnerCards";
 
 interface PostPageProps {
@@ -211,13 +209,13 @@ export default async function PostPage({ params }: PostPageProps) {
             {blocks.map((block, index) => {
               // 1. Ad blocks
               if (block === "[AD:1]") {
-                return <CoupangStaticAd key={`ad-1-${index}`} type="top" />;
+                return <CoupangPartnerCards key={`ad-1-${index}`} variant="keyring" />;
               }
               if (block === "[AD:2]") {
-                return <CoupangAd key={`ad-2-${index}`} />;
+                return <CoupangPartnerCards key={`ad-2-${index}`} variant="book" />;
               }
               if (block === "[AD:3]") {
-                return <CoupangStaticAd key={`ad-3-${index}`} type="bottom" />;
+                return <CoupangPartnerCards key={`ad-3-${index}`} variant="light" />;
               }
 
               // 2. Inline image blocks: [IMAGE: path]
@@ -246,9 +244,6 @@ export default async function PostPage({ params }: PostPageProps) {
               return renderHtmlBlock(block, index);
             })}
           </div>
-
-          {/* 쿠팡 파트너스 추천 카드 (키링 / 도서 / 독서등) */}
-          <CoupangPartnerCards />
 
           {/* 🚨 Bottom Coupang Partners Notice */}
           <div className="mt-10 pt-4 pb-4 text-center border-t border-gold/10">
