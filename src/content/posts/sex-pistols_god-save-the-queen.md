@@ -1,6 +1,6 @@
 ---
 title: 섹스 피스톨즈와 God Save the Queen, 펑크 록의 No Future가 기성 사회를 조롱한 방식
-image: "/images/authors/sex-pistols.jpg"
+image: "/images/authors/sex-pistols.jpeg"
 summary: 1970년대 영국 경제 파탄과 경직된 계급 사회의 모순 속에서 터져 나온 펑크 록의 상징 섹스 피스톨즈를 조명합니다. 여왕 즉위 25주년을 정면으로 겨눈 명곡 God Save the Queen과 시대의 절규 No Future가 기성 권력을 어떻게 조롱하고 해체했는지 인문학적 시선으로 분석합니다.
 keywords: 펑크 록, 아나키즘, No Future, 기성권력 풍자, 서브컬처
 category: "음악, 역사"

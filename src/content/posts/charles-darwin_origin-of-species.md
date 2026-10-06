@@ -1,6 +1,6 @@
 ---
 title: 종의 기원과 찰스 다윈의 진화론, 자연선택설이 촉발한 과학 혁명의 모든 것
-image: "/images/authors/charles-darwin.jpg"
+image: "/images/authors/charles-darwin.jpeg"
 summary: 찰스 다윈의 종의 기원 출간은 인류 지성사에 거대한 패러다임 전환을 가져온 과학 혁명이었습니다. 자연선택과 변이를 통한 생물 진화의 메커니즘, 생존경쟁과 적자생존의 본질적 의미를 명확히 짚어봅니다. 현대 진화생물학과 철학 전반에 미친 다윈주의의 본질을 깊이 있게 정리해 드립니다.
 keywords: 종의 기원, 찰스 다윈, 진화론, 자연선택설, 과학 혁명, 적자생존
 category: "철학, 사상"

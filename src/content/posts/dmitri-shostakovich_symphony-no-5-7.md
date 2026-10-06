@@ -1,6 +1,6 @@
 ---
 title: 쇼스타코비치 교향곡 5번과 레닌그라드 교향곡: 스탈린 시대 독재와 예술의 이중주
-image: "/images/authors/dmitri-shostakovich.jpg"
+image: "/images/authors/dmitri-shostakovich.jpeg"
 summary: 스탈린의 공포정치와 가혹한 전시 상황 속에서 드미트리 쇼스타코비치가 음악으로 남긴 저항의 기록을 살펴봅니다. 교향곡 5번과 레닌그라드 교향곡에 숨겨진 이중적 화법과 비극적 서사를 통해 전체주의에 맞선 예술의 본질을 조명합니다.
 keywords: 쇼스타코비치, 교향곡 5번, 레닌그라드 교향곡, 독재와 예술, 스탈린 시대, 전체주의
 category: "음악, 역사"

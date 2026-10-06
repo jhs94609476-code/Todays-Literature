@@ -1,6 +1,6 @@
 ---
 title: 밥 딜런 Like a Rolling Stone, 포크 록 명곡에 담긴 방랑과 실존의 저항 음악
-image: "/images/authors/bob-dylan.jpg"
+image: "/images/authors/bob-dylan.jpeg"
 summary: 밥 딜런의 불멸의 포크 록 명곡 Like a Rolling Stone을 통해 기득권의 몰락과 실존적 방랑의 의미를 탐구합니다. 모든 위선을 벗어던지고 바닥에 내던져졌을 때 마주하는 진정한 자유와 저항 음악으로서의 철학적 가치를 깊이 있게 분석합니다.
 keywords: 밥 딜런, Like a Rolling Stone, 포크 록, 실존적 질문, 방랑, 저항 음악
 category: "음악, 역사"

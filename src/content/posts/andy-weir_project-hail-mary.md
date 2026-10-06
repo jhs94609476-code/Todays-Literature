@@ -1,6 +1,6 @@
 ---
 title: 프로젝트 헤일메리 결말 해석과 원작 소설 리뷰: 앤디 위어가 증명한 하드 SF 우주 생존과 외계 지적 생명체의 우정
-image: "/images/authors/andy-weir.jpg"
+image: "/images/authors/andy-weir.jpg.jpeg"
 summary: 앤디 위어의 대표작 프로젝트 헤일메리는 태양 에너지 소멸 위기 속에서 펼쳐지는 과학적 문제 해결과 종을 뛰어넘은 지적 생명체의 우정을 다룹니다. 치밀한 하드 SF 설정과 인류 구원의 서사를 심층 분석합니다.
 keywords: 하드 SF, 인류 구원, 우주 조우, 지적 연대, 과학적 추론
 category: "문학, 시"

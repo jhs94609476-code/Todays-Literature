@@ -1,6 +1,6 @@
 ---
 title: 마일스 데이비스 Kind of Blue, 모달 재즈로 완성한 재즈 입문 명반이자 즉흥 연주의 정점
-image: "/images/authors/miles-davis.jpg"
+image: "/images/authors/miles-davis.jpeg"
 summary: 복잡한 코드 진행을 비워내고 선법(Mode)으로 소리의 여백을 채운 마일스 데이비스의 명작 Kind of Blue를 분석합니다. 모달 재즈의 탄생 배경부터 빌 에반스, 존 콜트레인과의 호흡, 그리고 현대 음악사에 남긴 미니멀리즘 미학의 정수를 심도 있게 살펴봅니다.
 keywords: 모달 재즈, Kind of Blue, 마일스 데이비스, 즉흥 연주, 재즈 입문 명반
 category: "음악, 역사"

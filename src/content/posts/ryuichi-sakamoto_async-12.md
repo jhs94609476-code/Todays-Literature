@@ -1,6 +1,6 @@
 ---
 title: 사카모토 류이치의 async와 12 유작 앨범: 앰비언트 음악과 삶과 죽음의 사색
-image: "/images/authors/ryuichi-sakamoto.jpg"
+image: "/images/authors/ryuichi-sakamoto.jpeg"
 summary: 사카모토 류이치가 투병 중 완성한 async와 유작 앨범 12를 통해 자연음과 일상의 소리를 예술로 승화시킨 과정을 살펴봅니다. 앰비언트 음악의 경계를 넘어 소리의 미학으로 마주한 삶과 죽음의 깊은 울림을 인문학적 시선으로 분석합니다.
 keywords: 사카모토 류이치, async, 12, 앰비언트, 삶과 죽음
 category: "음악, 역사"

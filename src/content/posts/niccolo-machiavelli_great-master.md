@@ -1,6 +1,6 @@
 ---
 title: 마키아벨리가 시대의 거장으로 불리는 이유: 이상의 허울을 벗긴 근대 정치학의 창시자
-image: "/images/authors/niccolò-machiavelli.jpg"
+image: "/images/authors/niccolo-machiavelli.jpg"
 summary: 니콜로 마키아벨리가 왜 단순한 논쟁적 인물을 넘어 인류 지성사의 위대한 거장으로 추앙받는지 탐구합니다. 중세 신학의 굴레를 깨고 정치와 윤리를 분리하여 현실주의 정치학의 토대를 구축한 그의 지적 혁명과 통찰을 분석합니다.
 keywords: "마키아벨리, 시대의 거장, 현실주의 정치학, 르네상스, 비르투와 포르투나"
 category: "시대의 거장들"

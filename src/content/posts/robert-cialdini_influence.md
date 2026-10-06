@@ -1,6 +1,6 @@
 ---
 title: 설득의 심리학 로버트 치알디니 6가지 설득 법칙과 심리 마케팅 완벽 분석
-image: "/images/authors/robert-cialdini.jpg"
+image: "/images/authors/robert-cialdini.jpeg"
 summary: 로버트 치알디니의 설득의 심리학을 바탕으로 인간의 의사결정을 이끄는 6가지 설득 법칙을 심층 분석합니다. 상호성의 원칙부터 희귀성까지 심리 마케팅과 비즈니스 협상에서 즉각 활용 가능한 메커니즘을 확인해 보세요.
 keywords: 설득의 심리학, 로버트 치알디니, 6가지 설득 법칙, 상호성의 원칙, 심리 마케팅
 category: "경제, 자본"

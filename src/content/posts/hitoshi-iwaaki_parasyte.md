@@ -1,6 +1,6 @@
 ---
 title: 기생수 결말과 해석: 이와아키 히토시가 던진 인간 본성과 환경 윤리, 기생생물과 공존의 조건
-image: "/images/authors/hitoshi-iwaaki.jpg"
+image: "/images/authors/hitoshi-iwaaki.jpeg"
 summary: 이와아키 히토시의 명작 만화 기생수를 통해 포식자의 시선에서 해체되는 인간 본성과 생태주의 윤리를 탐구합니다. 신이치와 오른쪽이, 타미야 료코의 여정을 통해 기생생물과 공존의 의미 및 인간다움의 실존적 정의를 고찰합니다.
 keywords: 인간 본성, 공존, 생태주의 윤리, 감정의 탄생, 실존적 질문
 category: "코믹스, 그래픽노블"
